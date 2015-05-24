@@ -1,7 +1,9 @@
 #Fractals - Turtle graphics
 
-**Dalimil Hájek**
-**L-system (Lindenmayer system)**
-*in Python*
+- **Author:** [Dalimil Hájek](mailto:dalimilhajek@seznam.cz)
 
-![fractal](https://raw.github.com/Dalimil/Fractals/blob/master/screenshot.png)
+**L-system (Lindenmayer system)**
+
+*Turtle graphics in Python*
+
+![fractal](https://github.com/Dalimil/Fractals/blob/master/screenshot.png)
