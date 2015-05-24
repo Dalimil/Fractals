@@ -1,9 +1,10 @@
 import turtle
+import colorsys
 
 s = "F"
 rep1 = "-F++G-"
 rep2 = "+F--G+"
-its = 15
+its = 14
 
 for k in range(its):
     z = [(i,s[i]) for i in range(len(s)-1, -1, -1) if s[i]=='F' or s[i]=='G']
@@ -14,16 +15,23 @@ for k in range(its):
 
 
 #draw
-turtle.setworldcoordinates(-500, -500, 500, 500)
+turtle.setworldcoordinates(-200, -500, 800, 500)
+turtle.setup(0.8, 0.8)
 wn = turtle.Screen()
-wn.delay(1)
+wn.delay(0)
 t = turtle.Turtle()
 t.speed(0)
+t.pensize(2)
 t.ht()
 angle = 45
-speed = 10
+speed = 6
+steps = s.count('F')+s.count('G')
+stepsSoFar = 0
 for i in s:
     if(i=='F' or i=='G'):
+        stepsSoFar += 1
+        n = (1.0*stepsSoFar)/steps;
+        t.pencolor(colorsys.hsv_to_rgb(n, 0.9,0.5))
         t.forward(speed)
     elif(i=='+'):
         t.left(angle)
